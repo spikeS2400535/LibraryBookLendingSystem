@@ -52,6 +52,15 @@
     <Compile Include="MainDashboard.Designer.cs">
       <DependentUpon>MainDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Book.cs" />
+    <Compile Include="Models\IReportable.cs" />
+    <Compile Include="Models\Librarian.cs" />
+    <Compile Include="Models\Library.cs" />
+    <Compile Include="Models\LibraryItem.cs" />
+    <Compile Include="Models\Loan.cs" />
+    <Compile Include="Models\Magazine.cs" />
+    <Compile Include="Models\Member.cs" />
+    <Compile Include="Models\Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -76,5 +85,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
