@@ -1,6 +1,6 @@
 ﻿namespace LibraryBookLendingSystem
 {
-    partial class Form1
+    partial class MainDashboard
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LibraryBookLendingSystem
 {
-    public partial class Form1 : Form
+    public partial class MainDashboard : Form
     {
-        public Form1()
+        public MainDashboard()
         {
             InitializeComponent();
         }
