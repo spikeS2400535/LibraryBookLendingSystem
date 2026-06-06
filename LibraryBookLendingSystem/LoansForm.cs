@@ -116,6 +116,15 @@ namespace LibraryBookLendingSystem
             dgvLoans.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             dgvLoans.EnableHeadersVisualStyles = false;
             this.Controls.Add(dgvLoans);
+
+            // Add available books and members info labels
+            Label lblAvailable = new Label();
+            lblAvailable.Text = "Tip: Go to Manage Books to see Book IDs, and Manage Members to see Member IDs.";
+            lblAvailable.Font = new Font("Segoe UI", 9, FontStyle.Italic);
+            lblAvailable.ForeColor = Color.FromArgb(155, 89, 182);
+            lblAvailable.AutoSize = true;
+            lblAvailable.Location = new Point(20, 608);
+            this.Controls.Add(lblAvailable);
         }
 
         private TextBox CreateInput(Panel panel, string label, int x, int y)
