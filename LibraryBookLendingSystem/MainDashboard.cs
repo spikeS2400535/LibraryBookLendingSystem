@@ -10,9 +10,25 @@ namespace LibraryBookLendingSystem
         // Shared library instance passed between forms
         public static Library Library = new Library();
 
+        private void LoadSampleData()
+        {
+            // Sample Books
+            Library.AddItem(new Models.Book(0, "The Great Gatsby", "F. Scott Fitzgerald", "978-0743273565", 1925, "Classic", 3));
+            Library.AddItem(new Models.Book(0, "To Kill a Mockingbird", "Harper Lee", "978-0061935466", 1960, "Fiction", 2));
+            Library.AddItem(new Models.Book(0, "1984", "George Orwell", "978-0451524935", 1949, "Dystopian", 4));
+            Library.AddItem(new Models.Book(0, "Harry Potter", "J.K. Rowling", "978-0439708180", 1997, "Fantasy", 5));
+            Library.AddItem(new Models.Book(0, "The Hobbit", "J.R.R. Tolkien", "978-0547928227", 1937, "Fantasy", 3));
+
+            // Sample Members
+            Library.AddMember(new Models.Member(0, "John Smith", "john@email.com", "0411111111"));
+            Library.AddMember(new Models.Member(0, "Sarah Johnson", "sarah@email.com", "0422222222"));
+            Library.AddMember(new Models.Member(0, "Mike Brown", "mike@email.com", "0433333333"));
+        }
+
         public MainDashboard()
         {
             InitializeComponent();
+            LoadSampleData();
             SetupDashboard();
         }
 
