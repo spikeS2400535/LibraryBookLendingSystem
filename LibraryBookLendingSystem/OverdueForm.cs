@@ -1,7 +1,9 @@
-﻿using System;
+﻿using LibraryBookLendingSystem.Models;
+using System;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
-using LibraryBookLendingSystem.Models;
+using System.Linq;
 
 namespace LibraryBookLendingSystem
 {
@@ -122,8 +124,8 @@ namespace LibraryBookLendingSystem
                         if (pc.Name == "lblInfo")
                         {
                             pc.Text = overdueLoans.Count == 0
-                                ? "✅ No overdue books at the moment!"
-                                : $"⚠️ There are {overdueLoans.Count} overdue book(s) that need attention!";
+                                ? "No overdue books at the moment!"
+                                : $"There are {overdueLoans.Count} overdue book(s) that need attention! Total days overdue: {overdueLoans.Sum(l => l.DaysOverdue())}";
                         }
                     }
                 }
