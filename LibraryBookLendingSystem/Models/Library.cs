@@ -161,6 +161,21 @@ namespace LibraryBookLendingSystem.Models
             return _loans.Where(l => l.IsOverdue()).ToList();
         }
 
+        public LibraryItem GetItemById(int id)
+        {
+            return _items.FirstOrDefault(i => i.Id == id);
+        }
+
+        public List<Loan> GetMemberLoans(int memberId)
+        {
+            return _loans.Where(l => l.Member.Id == memberId).ToList();
+        }
+
+        public List<LibraryItem> GetAvailableItems()
+        {
+            return _items.Where(i => i.IsAvailable).ToList();
+        }
+
         // --- INTERFACE METHOD ---
         public string GenerateReport()
         {
